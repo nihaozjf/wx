@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+			http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/aop 
+			http://www.springframework.org/schema/aop/spring-aop.xsd
+			http://www.springframework.org/schema/tx 
+			http://www.springframework.org/schema/tx/spring-tx.xsd
+			http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+			http://www.springframework.org/schema/context 
+			http://www.springframework.org/schema/context/spring-context.xsd">
+			
+	    <context:component-scan base-package="com" />
+    <!--
+<mvc:interceptors>
+    
+    <mvc:interceptor>
+        <mvc:mapping path="/usermobile/**" />
+        <bean class="com.akmi.bxxt.controlmobile.Interceptor" />
+    </mvc:interceptor>
+    
+    
+</mvc:interceptors>
+        -->  
+        
+        
+ <mvc:annotation-driven>
+    <mvc:message-converters register-defaults="true">
+        <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+            <property name="objectMapper">
+                <bean class="com.fasterxml.jackson.databind.ObjectMapper">
+                    <property name="serializationInclusion">
+                        <value type="com.fasterxml.jackson.annotation.JsonInclude.Include">NON_NULL</value>
+                    </property>
+                </bean>
+            </property>
+        </bean>
+    </mvc:message-converters>
+</mvc:annotation-driven>
+
+
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/view/" p:suffix=".jsp" />
+ 
+ 
+     <bean id="multipartResolver"    
+     class="org.springframework.web.multipart.commons.CommonsMultipartResolver"    
+      p:defaultEncoding="utf-8" />
+   
+   
+
+ 
+<bean
+  class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+  <property name="messageConverters">
+   <list>
+    <bean
+     class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+   </list>
+  </property>
+ </bean>
+ 
+<bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">  
+   <property name="supportedMediaTypes">  
+       <list>  
+           <value>text/html;charset=UTF-8</value>  
+       </list>  
+    </property> 
+    
+     
+</bean>  
+
+
+
+<bean class ="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" >       
+        <property name="messageConverters">
+            <list>
+               
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <property name = "supportedMediaTypes">
+                        <list>
+                            <value>text/html;charset=UTF-8</value>
+                             <value>application/json;charset=UTF-8</value>
+                        </list>
+                    </property>
+                </bean>
+             
+                <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" >
+                    <property name="supportedMediaTypes">
+                        <list>
+                            <value>text/html;charset=UTF-8</value>
+                             <value>application/json;charset=UTF-8</value>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+
+<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="order" value="1" />
+        <property name="mediaTypes">
+            <map>
+                <entry key="json" value="application/json" />
+            </map>
+        </property>
+        <property name="defaultViews">
+            <list>
+                <bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+            </list>
+        </property>
+        <property name="ignoreAcceptHeader" value="true" />
+    </bean>
+    
+<bean id="applicationContextWrapper" class="com.wx.util.ApplicationContextWrapper"></bean>   
+
+</beans>

@@ -1,0 +1,95 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #eee url(../images/signin/bg.jpg) no-repeat center top;
+  background-size: cover cover;
+  font-size: 12px;
+  min-width:920px;
+}
+.container{
+  width:890px;
+}
+.form-signin {
+  position: relative;
+  width: 326px;
+  padding: 15px 30px 30px;
+  margin: 0 auto;
+  background: url(../images/signin/bg_loginbox.png) no-repeat center top;
+}
+.form-signin h2{
+  margin-top:0;
+  padding-top:15px;
+  text-align: left;
+}
+.form-signin .checkbox {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.form-signin .checkbox input {
+  top:-1px;
+  *top:-3px;
+  *margin-top: 0;
+}
+.form-signin .form-control {
+  width:100%;
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 12px 10px;
+  font-size: 16px;
+  font-size: 12px;
+  *width:90%;
+  *padding-left:5%;
+  *padding-right:5%;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin .btn{
+  font-family: "microsoft yahei";
+  font-size:16px;
+}
+.signin-copy{
+  width: 366px;
+  padding: 5px 0;
+  margin: 0 auto;
+  color:#3798bc;
+}
+.warning {
+position: absolute;
+left:-265px;
+top: 80px;
+background: #fbfbfb;
+border-radius: 3px;
+padding: 0 25px 20px;
+}
+.warning h3 {
+font-weight: bold;
+font-size: 14px;
+background: url(../images/signin/ico_warning.png) no-repeat 10px 0;
+padding: 10px 0 20px 55px;
+border-bottom: 1px solid #ddd;
+}
+.warning .arrow {
+position: absolute;
+right: -10px;
+top: 30px;
+}
+.warning ul {
+margin: 0;
+padding: 0 0 0 10px;
+font-size: 12px;
+list-style: none;
+}

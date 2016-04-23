@@ -1,0 +1,406 @@
+body {
+  font-size: 12px;
+}
+/*顶部*/
+.toolnav{
+  position: absolute;
+  right:30px;
+  top:0;
+  padding: 16px 0 0 0;
+}
+.toolnav li{
+  float: left;
+  padding-left:22px;
+}
+.toolnav a{
+  color: #fff;
+  margin-right: 10px;
+}
+.toolnav .user{
+  background: url(../images/main/ico_list.png) no-repeat 0 3px;
+}
+.toolnav .name{
+  font-weight: bold;
+}
+.toolnav .set{
+  margin:1px 0 0 0;
+  background: url(../images/main/ico_list.png) no-repeat -160px 3px;
+}
+.toolnav .loginout{
+  background: url(../images/main/ico_list.png) no-repeat -318px 3px;
+}
+.navbar-menu-wrap{
+  padding:0;
+  zoom:1;
+}
+.navbar-menu a{
+  padding:5px 22px 13px;
+  color:#fff;
+}
+.navbar-menu .on a{
+  color:#053057;
+  font-weight:bold;
+  vertical-align: top;
+  background: url(../images/main/bg_navon.png) no-repeat center bottom;
+}
+.searchBar{
+  border:0;
+  height:24px;
+  width:180px;
+  background: #fff;
+  margin-right:55px;
+  border-radius: 4px;
+}
+.searchBar .txt{
+  float:left;
+  width:145px;
+  height:22px;
+  line-height: 22px;
+  padding-left:10px;
+  border:none;
+  border-radius: 4px;
+}
+.searchBar .inputBtn{
+  float:left;
+  width:24px;
+  height:24px;
+  background:url(../images/main/ico_list.png) no-repeat -468px 4px;
+  border:none;
+}
+/*侧栏*/
+.sidebar {
+  position: fixed;
+  top: 90px;
+  width:240px;
+  bottom: 0;
+  left: 0;
+  padding-top:5px;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f2f2f2;
+  border-right: 1px solid #ddd;
+}
+.sidemenu .perTtl{
+  border-top:1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  height: 34px;
+  line-height:34px;
+  padding-left:28px;
+  margin-bottom: 0;
+  color:#053057;
+  background-color: #fafafa;
+  margin-top:-1px;
+  cursor: pointer;
+}
+.sidemenu .fnli .perTtl{
+  background:#fafafa url(../images/main/ico_list.png) no-repeat -156px -60px;
+}
+.sidemenu .fnli.active .perTtl{
+  background-color: #f4faff;
+}
+.sidemenu .fnli .perTtl span{
+  background:url(../images/main/ico_list.png) no-repeat 194px -61px;
+}
+.sidemenu .openli .perTtl{
+  background:#f4faff url(../images/main/ico_list.png) no-repeat -156px -21px;
+}
+.sidemenu .openli .perTtl span{
+  background:url(../images/main/ico_list.png) no-repeat 84px -22px;
+}
+.sidemenu .openli .submenu{
+  display: block;
+}
+.sidemenu .closeli .perTtl{
+  background:#fafafa url(../images/main/ico_list.png) no-repeat -394px -21px;
+}
+.sidemenu .closeli .perTtl span{
+  background:url(../images/main/ico_list.png) no-repeat 194px -61px;
+}
+.sidemenu .closeli .submenu{
+  display: none;
+}
+.sidemenu .submenu{
+  position: relative;
+  margin-left: 15px;
+  padding:5px 0;
+  border-left: 1px dotted #207acc;
+}
+.lastclose.submenu:after{
+  display: block;
+  content: '';
+  position: absolute;
+  border-left:1px solid #f2f2f2;
+  height:16px;
+  left:-1px;
+  bottom:0;
+}
+.sidemenu .submenu li{
+  position: relative;
+  padding-left: 18px;
+}
+.sidemenu .submenu li:before {
+  border-top: 1px dotted #207acc;
+  content: "";
+  display: inline-block;
+  left:0;
+  position: absolute;
+  top: 12px;
+  width:8px;
+}
+.sidemenu .submenu .active:before{
+  font-family: FontAwesome;
+  content:"\f101";
+  border-top: none;
+  color:#207acc;
+  top:3px;
+  left:-3px;
+  background:#f2f2f2;
+}
+.sidemenu .submenu a{
+  padding:4px 0;
+  color:#555;
+}
+.sidemenu .submenu .active a{
+  color:#337ab7;
+}
+/*右侧主体*/
+.loading{
+  background: #fff;
+  height:230px;
+  text-align: center;
+}
+.container-right{
+  padding:100px 10px 0 251px ;
+}
+.container-right .breadcrumb li:before{
+  content: ">";
+  font-family: simsun;
+  color:#999;
+}
+.container-right .breadcrumb li:first-child:before{
+  content:"";
+}
+/*单元块*/
+.unitPt{
+  border:1px solid #ccc;
+}
+.unitPt h2{
+  height:34px;
+  line-height:34px;
+  background:#fafafa;
+  margin: 0;
+  padding-left: 10px;
+  border-bottom: 1px solid #ddd;
+}
+/*table-striped*/
+.table-striped.table,.table-striped.table label{
+  margin-bottom: 0;
+}
+.table-striped.table td,.table-striped.table th{
+  line-height: auto;
+  vertical-align: middle;
+}
+.table-striped.table th{
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #cdcdcd;
+  vertical-align: middle;
+}
+.unitPt .graph,.unitPt .tabbable{
+  padding:20px;
+}
+/*table-horizontal*/
+.unitPt .table-horizontal{
+  margin-bottom:0;
+}
+.unitPt .table-horizontal th{
+  vertical-align: middle;
+  margin-bottom:0;
+}
+.dataTables_paginate{
+  border-top:1px solid #ddd;
+  background:#eff3f8;
+}
+.dataTables_paginate .pagination{
+  margin: 0 12px;
+}
+.modal .dataTables_paginate{
+  background:#fff;
+}
+.pagination li.disabled a,
+.pagination li.disabled a:hover{
+  background-color: #f9f9f9;
+  border-color: #d9d9d9;
+}
+.pagination li.next,
+.pagination li.prev{
+  font-family:simsun;
+}
+.pageGo input{
+  width:40px;
+  border-radius: 4px 0 0 4px;
+}
+.referInn .form-control{
+  width:auto;
+  height: 31px;
+  display: inline-block;
+  *display: inline;
+  *zoom:1;
+}
+.referInn input{
+  width:140px;
+}
+.modal-body .table-horizontal{
+  margin-bottom: 10px;
+}
+.modal-body .table-horizontal th,
+.modal-body .table-horizontal td{
+  border-top: none;
+  vertical-align: middle;
+  padding:8px 4px;
+}
+.modal-body .table-horizontal th.ttl{
+  background: #f2f2f2;
+  font-family: "microsoft yahei";
+  font-size:14px;
+  padding-left:20px;
+}
+.modal-body .table-horizontal label{
+  margin-bottom: 0
+}
+.alert .blockBtn{
+  width:150px;
+}
+.blockBtn .btn-xiuli{
+  padding:65px 0 8px;
+  background-image:url(../images/main/ico_xiuli.png);
+  background-repeat:no-repeat;
+  background-position: center 10px;
+  margin:0 auto;
+}
+.nav-tabs li a{
+  outline: none;
+}
+.modal-body input[type="radio"],.modal-body input[type="checkbox"]{
+  margin:0 5px 0 0;
+}
+.modal-body p{
+  margin-bottom: 0;
+}
+/*meetWrap*/
+.meetTtl{
+  background: #dff0d8;
+  padding:10px 20px;
+  color:#3c763d;
+  margin-bottom: 0
+}
+.meetTtl dt{
+  font-size:32px;
+  font-weight: normal;
+  vertical-align: top;
+}
+.meetTtl dt span{
+  font-family: Impact;
+  font-size:34px;
+}
+.table-meet{
+  width:100%;
+  border-collapse: collapse;
+}
+.table-meet .date{
+  background: #f6f6f6;
+  font-size:17px;
+  height:52px;
+  vertical-align: middle;
+  font-weight: normal;
+  border-bottom: 1px solid #ddd;
+}
+.table-meet .date p{
+  font-size:12px;
+  color:#ccc;
+  margin-bottom:0
+}
+.table-meet .time{
+  background: #fafafa;
+  vertical-align: top;
+  padding:10px;
+  font-size:16px;
+  font-weight: normal;
+  border-bottom: 1px solid #e2e2e2;
+  color:#666;
+}
+.table-meet td{
+  height:80px;
+  padding:5px;
+  vertical-align: top;
+  border:1px solid #e2e2e2;
+}
+.table-meet td p{
+  margin-bottom:0
+}
+.table-meet .book{
+  cursor: pointer;
+}
+.table-meet .bkLink{
+  display: block;
+  height: 100%;
+  outline:none;
+  color:#ccc;
+}
+.table-meet .state1{
+  background: #d9534f;
+  color:#fff;
+}
+.table-meet .state1 .stt{
+  color:#edaeac;
+}
+.table-meet .state2{
+  background: #5bc0de;
+  color:#fff;
+}
+.table-meet .state2 .stt{
+  color:#b0dfed;
+}
+.table-meet .state3{
+  background: #82af6f;
+  color:#fff;
+}
+.table-meet .past{
+  background: #fafafa;
+}
+/**/
+.list-striped{
+  width:100%;
+  margin-bottom: -1px;
+}
+.list-striped li{
+  padding:0 10px;
+}
+.list-striped .list-header{
+  background: #f2f2f2;
+  font-weight: bold;
+  border-bottom: 1px solid #cdcdcd;
+}
+.list-striped .list-odd{
+  background: #f9f9f9;
+}
+.list-striped .list-cont{
+  border-bottom: 1px solid #ddd;
+}
+.list-striped .list-cont:hover{
+  background: #f5f5f5;
+}
+.list-striped p{
+  padding:10px 0;
+  margin-bottom: 0;
+}
+.list-striped .chbx{
+  padding:12px 0 8px;
+}
+.list-striped .btnp{
+  padding:5px 0;
+}
+.list-striped label,.list-striped input{
+  margin-bottom: 0;
+  margin-top:0;
+}
